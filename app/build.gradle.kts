@@ -1,8 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("org.jetbrains.kotlin.plugin.compose")
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
@@ -45,20 +43,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+
     // WebSockets
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
 
-    // Serialización JSON rápida
-    implementation("com.google.code.gson:gson:2.10.1")
-    // Cliente WebSocket (OkHttp)
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
-
-    // Serializador JSON
-    implementation("com.google.code.gson:gson:2.10.1")
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    // JSON Serializer
     implementation("com.google.code.gson:gson:2.10.1")
 
     // --- NUEVAS LIBRERÍAS DE INTERFAZ GRÁFICA (COMPOSE) ---
@@ -69,5 +61,4 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
-
 }
