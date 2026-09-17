@@ -11,6 +11,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import com.mundonoobs.pcremoteapp.repository.RemoteControlManager
 import com.mundonoobs.pcremoteapp.ui.navigation.ConnectionScreen
+import com.mundonoobs.pcremoteapp.ui.navigation.MainScreen
 import okhttp3.OkHttpClient
 
 class MainActivity : ComponentActivity() {
@@ -41,7 +42,7 @@ class MainActivity : ComponentActivity() {
                         )
                     } else {
                         // Aquí conectaremos la Vista del Teclado en el siguiente paso
-                        Text(text = "¡Conexión Exitosa! Preparando módulos...")
+                        MainScreen(manager = remoteManager)
                     }
                 }
             }

@@ -43,7 +43,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
-
+    implementation("androidx.compose.material:material-icons-extended")
     // WebSockets
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
